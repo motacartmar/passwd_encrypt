@@ -8,7 +8,7 @@ You just need to install python3, and run passwd_encrypt.py
 
 Choose a .txt file and the mode('Encrypt' : 'Decrypt'), set a password and hit the green button.
 
-After that you can save any .txt file safest.
+After that you can save any .txt file safer.
 
 To decrypt is the same method, but you need to put exactly same password to decrypt the file.
 
