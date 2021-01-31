@@ -134,9 +134,9 @@ while True:
                         f.write(content)
                         print(content)
                         
-            elif not str(path).endswith('.txt') and passwd_len < 5:
+            elif not str(path).endswith('.txt') and passwd_len <= 2:
                 sg.popup_error('Weak Password and select .txt file')
-            elif passwd_len <= 5 and str(path).endswith('.txt'):
+            elif passwd_len <= 2 and str(path).endswith('.txt'):
                 sg.popup_error(f'Weak Password {passwd_len} digitis')
             else:
                 sg.popup_error('Select .txt file')
