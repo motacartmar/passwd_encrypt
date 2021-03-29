@@ -108,29 +108,23 @@ while True:
                         i = 0
                         for line in lines:
                             encrypted = password_encrypt(message= str.encode(line), password= passwd)
-                            #print(encrypted.decode())   #####
                             content += encrypted.decode() + '\n'
                         with open(path, 'w') as b:
                             b.write(content) 
-                            print(content)
             
                 else:
                     with open(path, 'rb') as f:
                         lines = f.readlines()
                         for line in lines:
                             bytedecode = line.decode().split('\r\n')
-                            #print(bytedecode)
                             if bytedecode[0] != ' ':
                                 byte = str.encode(bytedecode[0])
-                                #print(byte)
                                 decryptedbyte = password_decrypt(token= byte, password= passwd)
                                 decrypted = decryptedbyte.decode('UTF-8')
-                                #print(decryptedbyte.decode('UTF-8'))
                                 content += decrypted 
                 
                     with open(path, 'w') as f:
                         f.write(content)
-                        print(content)
                         
             elif not str(path).endswith('.txt') and passwd_len <= 2:
                 sg.popup_error('Weak Password and select .txt file')
