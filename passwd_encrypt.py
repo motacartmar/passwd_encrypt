@@ -97,8 +97,6 @@ while True:
         passwr = value['-PASSWD-']
         path = value['-PATH-']
 
-        #print(password_encrypt(message=b'teste', password='123'))
-        #print(password_decrypt(token=b'kwiih8B8aiHVugUUv5uwIQABhqCAAAAAAGAPWl5CaNurDl2TqL1tTmkpETSbGgAHkEZlNk6sO7IuRF7IeyEiRkrdk3PZbM71fgqJsBeBjy4tLpeckpj7-RTRZe2z', password='123'))
         content = ''
 
         try:
